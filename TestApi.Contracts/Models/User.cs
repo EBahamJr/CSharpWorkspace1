@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TestApi.Contracts.Models
+namespace TodoApi.Contracts.Models
 {
     public class User
     {

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApi", "TestApi\TestApi.csproj", "{C2059645-482B-44DC-BE62-3627154F28E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoApi", "TestApi\TodoApi.csproj", "{C2059645-482B-44DC-BE62-3627154F28E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi.Contracts", "TestApi.Contracts\TestApi.Contracts.csproj", "{00997CF2-C62A-47C6-8239-5F4DD90AC05A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApi.Contracts", "TestApi.Contracts\TodoApi.Contracts.csproj", "{00997CF2-C62A-47C6-8239-5F4DD90AC05A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

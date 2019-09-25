@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
-using TestApi.Contracts.Models;
+using TodoApi.Contracts.Models;
 
 namespace TodoApi.Contracts.Models
 {

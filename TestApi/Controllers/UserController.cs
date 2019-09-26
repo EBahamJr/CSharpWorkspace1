@@ -64,8 +64,8 @@ namespace TodoApi.Controllers
             return CreatedAtAction(nameof(GetUser), new { userId = user.UserId }, user);
         }
 
-        // PUT: api/Todo/5
-        [HttpPut("{id}")]
+        // PUT: api/User/5
+        [HttpPut("{userId}")]
         public async Task<IActionResult> PutTodoItem(int userId, User user)
         {
             if (userId != user.UserId)
@@ -74,6 +74,23 @@ namespace TodoApi.Controllers
             }
 
             _context.Entry(user).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        // DELETE: api/Todo/5
+        [HttpDelete("{userId}")]
+        public async Task<IActionResult> DeleteTodoItem(int userId)
+        {
+            var User = await _context.Users.FindAsync(userId);
+
+            if (User == null)
+            {
+                return NotFound();
+            }
+
+            _context.Users.Remove(User);
             await _context.SaveChangesAsync();
 
             return NoContent();

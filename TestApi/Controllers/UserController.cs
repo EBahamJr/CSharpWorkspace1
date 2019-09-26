@@ -53,5 +53,30 @@ namespace TodoApi.Controllers
 
             return Users;
         }
+
+        // POST: api/User
+        [HttpPost]
+        public async Task<ActionResult<User>> PostUser(User user)
+        {
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetUser), new { userId = user.UserId }, user);
+        }
+
+        // PUT: api/Todo/5
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutTodoItem(int userId, User user)
+        {
+            if (userId != user.UserId)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(user).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
     }
 }
